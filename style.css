@@ -21,6 +21,27 @@
   padding: 0;
   box-sizing: border-box;
 }
+.infinite-images a {
+  display: block;
+  width: 100%;
+  flex-shrink: 0;
+  line-height: 0;
+}
+
+.infinite-images a img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+  margin: 0;
+  cursor: pointer;
+
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.infinite-images a:hover img {
+  filter: brightness(1.08);
+}
 
 body {
   font-family: "DM Sans", sans-serif;
