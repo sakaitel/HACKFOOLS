@@ -7,6 +7,11 @@
     <img src="imagem-esquerda.jpg" alt="Imagem esquerda">
   </div>
 
+  <!-- CONTADOR DE CAPACIDADE DO PERFIL -->
+<div id="profileCounter" class="profile-counter">
+  <span class="counter-label">Pessoas compatíveis</span>
+  <strong id="counterValue">100 mil</strong>
+</div>
 
   <!-- =========================
        CENTRO — FORMULÁRIO
@@ -45,13 +50,11 @@
 
         <select name="idade_relativa" class="formbold-form-input">
           <option value="">Selecione</option>
-          <option>0–25%</option>
-          <option>26–50%</option>
-          <option>51–75%</option>
-          <option>76–100%</option>
-          <option>101–150%</option>
-          <option>151–250%</option>
-          <option>250%+</option>
+          <option>20–29%</option>
+          <option>30–44%</option>
+          <option>45–59%</option>
+          <option>60–79%</option>
+          <option>80–100%</option>
         </select>
       </div>
 
@@ -62,12 +65,13 @@
 
         <select name="especie" class="formbold-form-input">
           <option value="">Selecione</option>
-          <option>Humana</option>
-          <option>Sintética</option>
-          <option>Alienígena</option>
-          <option>Híbrida</option>
-          <option>Pós-humana</option>
-          <option>Outra</option>
+          <option>Glorbs</option>
+          <option>Reptilianos</option>
+          <option>Ecteídios</option>
+          <option>Híbridos</option>
+          <option>Humanos</option>
+          <option>Sintéticos</option>
+          <option>Não desejo declarar</option>
         </select>
       </div>
 
@@ -75,7 +79,7 @@
       <!-- Sexo / gênero -->
       <div class="formbold-mb-5">
         <label class="formbold-form-label">
-          Qual é o seu sexo/gênero?
+          Qual é o seu gênero?
         </label>
 
         <select name="genero" class="formbold-form-input">
@@ -83,8 +87,9 @@
           <option>Feminino</option>
           <option>Masculino</option>
           <option>Não-binário</option>
-          <option>Fluido</option>
+          <option>Depende</option>
           <option>Sem gênero</option>
+          <option>Multiplas personalidades / não se aplica</option>
           <option>Outro</option>
         </select>
       </div>
@@ -99,93 +104,29 @@
           <option>Ela / dela</option>
           <option>Ele / dele</option>
           <option>Elu / delu</option>
-          <option>Qualquer pronome</option>
-          <option>Nenhum</option>
-          <option>Outro</option>
+          <option>Não sei / não se aplica</option>
         </select>
       </div>
-
 
       <!-- Planeta -->
       <div class="formbold-mb-5">
         <label class="formbold-form-label">
-          Em qual planeta você nasceu?
+          Planeta - Galáxia
         </label>
 
         <select name="planeta" class="formbold-form-input">
           <option value="">Selecione</option>
-          <option>Terra</option>
-          <option>Marte</option>
-          <option>Vênus</option>
-          <option>Júpiter</option>
-          <option>Saturno</option>
+          <option>Bogus - BI</option>
+          <option>Zhynx - WX</option>
+          <option>Zaun - AR</option>
+          <option>Terra - VL</option>
+          <option>Polyestar - RE</option>
           <option>Outro</option>
         </select>
       </div>
 
 
-      <!-- Galáxia -->
-      <div class="formbold-mb-5">
-        <label class="formbold-form-label">
-          Em qual galáxia você nasceu?
-        </label>
-
-        <select name="galaxia" class="formbold-form-input">
-          <option>Via Láctea (VL)</option>
-          <option>Andrômeda</option>
-          <option>Galáxia do Triângulo</option>
-          <option>Outra</option>
-        </select>
-      </div>
-
-
-      <!-- Robô -->
-      <div class="formbold-mb-5">
-        <label class="formbold-form-label">
-          Qual porcentagem do seu corpo é robótica?
-        </label>
-
-        <div class="range-wrapper">
-          <input
-            type="range"
-            name="porcentagem_robo"
-            min="0"
-            max="100"
-            step="10"
-            value="0"
-            id="roboRange"
-          >
-
-          <span id="roboValue">0%</span>
-        </div>
-      </div>
-
-
-      <!-- Comunicação -->
-      <div class="formbold-mb-5">
-        <label class="formbold-form-label">
-          Como você se comunica?
-        </label>
-
-        <div class="options-grid">
-
-          <label class="option-card">
-            <input type="radio" name="comunicacao" value="telepatia">
-            <span>Telepatia</span>
-          </label>
-
-          <label class="option-card">
-            <input type="radio" name="comunicacao" value="sonora">
-            <span>Sonora</span>
-          </label>
-
-          <label class="option-card">
-            <input type="radio" name="comunicacao" value="vibracional">
-            <span>Vibracional</span>
-          </label>
-
-        </div>
-      </div>
+     
 
 
 
@@ -224,12 +165,17 @@
 
           <label class="option-card">
             <input type="radio" name="linguagem_amor" value="servico">
-            <span>Atos de serviço</span>
+            <span>Serviço</span>
           </label>
 
           <label class="option-card">
             <input type="radio" name="linguagem_amor" value="fisico">
             <span>Contato físico</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="linguagem_amor" value="fisico">
+            <span>Briga e desafetos</span>
           </label>
 
         </div>
@@ -279,7 +225,7 @@
       <!-- Filhos -->
       <div class="formbold-mb-5">
         <label class="formbold-form-label">
-          Quantos filhos você tem?
+          Quantos filhos você tem / deseja ter?
         </label>
 
         <select name="filhos" class="formbold-form-input">
@@ -314,79 +260,10 @@
         </div>
       </div>
 
-
-      <!-- Drogas -->
-      <div class="formbold-mb-5">
-        <label class="formbold-form-label">
-          Você utiliza drogas recreativas?
-        </label>
-
-        <div class="options-grid two">
-
-          <label class="option-card">
-            <input
-              type="radio"
-              name="drogas"
-              value="nao"
-              onclick="mostrarDrogas(false)"
-            >
-            <span>Não</span>
-          </label>
-
-          <label class="option-card">
-            <input
-              type="radio"
-              name="drogas"
-              value="sim"
-              onclick="mostrarDrogas(true)"
-            >
-            <span>Sim</span>
-          </label>
-
-        </div>
-      </div>
-
-
-      <!-- Tipos de drogas -->
-      <div
-        class="formbold-mb-5 hidden"
-        id="tiposDrogas"
-      >
-
-        <label class="formbold-form-label">
-          Qual categoria você utiliza?
-        </label>
-
-        <div class="options-grid">
-
-          <label class="option-card">
-            <input type="checkbox" name="tipo_droga[]" value="psicodelicas">
-            <span>Psicodélicas</span>
-          </label>
-
-          <label class="option-card">
-            <input type="checkbox" name="tipo_droga[]" value="estimulantes">
-            <span>Estimulantes</span>
-          </label>
-
-          <label class="option-card">
-            <input type="checkbox" name="tipo_droga[]" value="depressoras">
-            <span>Depressoras</span>
-          </label>
-
-          <label class="option-card">
-            <input type="checkbox" name="tipo_droga[]" value="sinteticas">
-            <span>Sintéticas</span>
-          </label>
-
-        </div>
-      </div>
-
-
       <!-- Ética do teletransporte -->
       <div class="formbold-mb-5">
         <label class="formbold-form-label">
-          A nova tecnologia de teletransporte é ética?
+          Considerando se a nova tecnologia de teletransporte é ética, se podemos substituir os buracos de minhoca, quais as ramificações do teletransporte na malha interestelar, e a destruição da matéria e reconstrução em outro lugar nos leva a questionar: você ainda é você?
         </label>
 
         <div class="options-grid two">
@@ -405,147 +282,14 @@
       </div>
 
 
-      <!-- Buracos de minhoca -->
-      <div class="formbold-mb-5">
-        <label class="formbold-form-label">
-          O teletransporte deve substituir os buracos de minhoca?
-        </label>
-
-        <div class="options-grid two">
-
-          <label class="option-card">
-            <input type="radio" name="substituir_buracos" value="sim">
-            <span>Sim</span>
-          </label>
-
-          <label class="option-card">
-            <input type="radio" name="substituir_buracos" value="nao">
-            <span>Não</span>
-          </label>
-
-        </div>
-      </div>
-
-
-      <!-- Consequência -->
-      <div class="formbold-mb-5">
-        <label class="formbold-form-label">
-          Qual será a principal consequência do teletransporte
-          na malha interestelar?
-        </label>
-
-        <select name="consequencia_teletransporte" class="formbold-form-input">
-
-          <option value="">Selecione</option>
-
-          <option>
-            Fim das viagens convencionais
-          </option>
-
-          <option>
-            Expansão acelerada das civilizações
-          </option>
-
-          <option>
-            Colapso das fronteiras planetárias
-          </option>
-
-          <option>
-            Aumento dos conflitos
-          </option>
-
-          <option>
-            Aumento da desigualdade entre espécies
-          </option>
-
-          <option>
-            Nenhuma consequência significativa
-          </option>
-
-        </select>
-      </div>
-
-
-      <!-- Identidade -->
-      <div class="formbold-mb-5">
-        <label class="formbold-form-label">
-          Após ser destruído e reconstruído,
-          você ainda é você?
-        </label>
-
-        <div class="options-grid">
-
-          <label class="option-card">
-            <input type="radio" name="identidade" value="sim">
-            <span>Sim</span>
-          </label>
-
-          <label class="option-card">
-            <input type="radio" name="identidade" value="nao">
-            <span>Não</span>
-          </label>
-
-          <label class="option-card">
-            <input type="radio" name="identidade" value="memoria">
-            <span>Se a memória for preservada</span>
-          </label>
-
-          <label class="option-card">
-            <input type="radio" name="identidade" value="consciencia">
-            <span>Se a consciência for preservada</span>
-          </label>
-
-          <label class="option-card">
-            <input type="radio" name="identidade" value="impossivel">
-            <span>Não é possível saber</span>
-          </label>
-
-        </div>
-      </div>
-
-
-
       <!-- =========================
            STATUS
            ========================= -->
 
       <div class="section-title">
         <span>03</span>
-        <h2>Status</h2>
+        <h2>Incompatibilidades</h2>
       </div>
-
-
-      <!-- Distância -->
-      <div class="formbold-mb-5">
-
-        <label class="formbold-form-label">
-          Qual é a distância até essa espécie?
-        </label>
-
-        <div class="range-wrapper">
-
-          <span>Contato</span>
-
-          <input
-            type="range"
-            name="distancia"
-            min="0"
-            max="100"
-            step="10"
-            value="50"
-            id="distanciaRange"
-          >
-
-          <span>Desconhecida</span>
-
-        </div>
-
-        <div class="range-value">
-          <span id="distanciaValue">50%</span>
-        </div>
-
-      </div>
-
 
       <!-- Compatibilidade -->
       <div class="formbold-mb-5">
@@ -667,31 +411,6 @@
           </label>
 
         </div>
-      </div>
-
-
-      <!-- Responsabilidade humana -->
-      <div class="formbold-mb-5">
-
-        <label class="formbold-form-label">
-          Qual é o nível de responsabilidade histórica
-          da espécie humana sobre outras espécies?
-        </label>
-
-        <select
-          name="responsabilidade_humana"
-          class="formbold-form-input"
-        >
-
-          <option value="">Selecione</option>
-          <option>Nenhuma</option>
-          <option>Baixa</option>
-          <option>Moderada</option>
-          <option>Alta</option>
-          <option>Extrema</option>
-
-        </select>
-
       </div>
 
 
@@ -958,6 +677,71 @@
     font-weight: 600;
   }
 
+  /* =========================
+   CONTADOR — CANTO SUPERIOR DIREITO
+   ========================= */
+
+.profile-counter {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  z-index: 9999;
+
+  min-width: 150px;
+  padding: 14px 18px;
+
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #dde3ec;
+  border-radius: 10px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  text-align: center;
+
+  transition: 0.25s;
+}
+
+.counter-label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #536387;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.profile-counter strong {
+  display: block;
+
+  color: #6a64f1;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  transition: 0.2s;
+}
+
+/* efeito quando o número muda */
+.profile-counter.changed {
+  transform: scale(1.05);
+}
+
+@media (max-width: 750px) {
+  .profile-counter {
+    top: 10px;
+    right: 10px;
+
+    min-width: 120px;
+    padding: 10px 12px;
+  }
+
+  .profile-counter strong {
+    font-size: 19px;
+  }
+}
 
   /* =========================
      BOTÃO
@@ -1048,15 +832,233 @@
 <script>
 
   /* =========================
+     CONTADOR DO PERFIL
+     ========================= */
+
+  const counterElement =
+    document.getElementById("counterValue");
+
+  const counterBox =
+    document.getElementById("profileCounter");
+
+  // Capacidade inicial
+  const CAPACIDADE_INICIAL = 100000;
+
+  // Quantidade atual
+  let pessoasRestantes = CAPACIDADE_INICIAL;
+
+  // Perguntas que já foram respondidas
+  const perguntasRespondidas = new Set();
+
+
+  /*
+   * Quanto cada pergunta reduz a capacidade.
+   *
+   * Você pode alterar esses valores.
+   */
+
+  const pesoPerguntas = {
+
+    idade_relativa: 3000,
+
+    especie: 8000,
+
+    genero: 2000,
+
+    pronomes: 1000,
+
+    planeta: 10000,
+
+    linguagem_amor: 5000,
+
+    hobby: 3000,
+
+    deuses: 4000,
+
+    filhos: 4000,
+
+    monogamia: 6000,
+
+    teletransporte_etico: 7000,
+
+    compatibilidade: 12000,
+
+    eles_usaram: 9000,
+
+    eu_usei: 9000
+
+  };
+
+
+  /*
+   * Atualiza o número na tela
+   */
+
+  function atualizarContador() {
+
+    if (pessoasRestantes < 0) {
+      pessoasRestantes = 0;
+    }
+
+    const milhares =
+      Math.round(pessoasRestantes / 1000);
+
+    if (milhares >= 1) {
+
+      counterElement.textContent =
+        milhares.toLocaleString("pt-BR") + " mil";
+
+    } else {
+
+      counterElement.textContent =
+        pessoasRestantes.toLocaleString("pt-BR");
+
+    }
+
+    // Pequeno efeito visual
+    counterBox.classList.remove("changed");
+
+    void counterBox.offsetWidth;
+
+    counterBox.classList.add("changed");
+
+  }
+
+
+  /*
+   * Registra uma pergunta como respondida.
+   *
+   * Cada pergunta diminui apenas uma vez.
+   */
+
+  function registrarResposta(nomePergunta) {
+
+    if (
+      !perguntasRespondidas.has(nomePergunta)
+    ) {
+
+      perguntasRespondidas.add(nomePergunta);
+
+      const reducao =
+        pesoPerguntas[nomePergunta] || 2000;
+
+      pessoasRestantes -= reducao;
+
+      atualizarContador();
+
+    }
+
+  }
+
+
+  /* =========================
+     CAMPOS SELECT
+     ========================= */
+
+  document
+    .querySelectorAll("select")
+    .forEach(select => {
+
+      select.addEventListener("change", function () {
+
+        if (this.value !== "") {
+
+          registrarResposta(this.name);
+
+        }
+
+      });
+
+    });
+
+
+  /* =========================
+     RADIO
+     ========================= */
+
+  document
+    .querySelectorAll('input[type="radio"]')
+    .forEach(radio => {
+
+      radio.addEventListener("change", function () {
+
+        registrarResposta(this.name);
+
+      });
+
+    });
+
+
+  /* =========================
+     CHECKBOX
+     ========================= */
+
+  document
+    .querySelectorAll('input[type="checkbox"]')
+    .forEach(checkbox => {
+
+      checkbox.addEventListener("change", function () {
+
+        /*
+         * O [] é removido para que todos
+         * os checkbox da mesma pergunta
+         * contem como uma única resposta.
+         */
+
+        const nome =
+          this.name.replace("[]", "");
+
+        registrarResposta(nome);
+
+      });
+
+    });
+
+
+  /* =========================
+     NOME
+     ========================= */
+
+  const nomeInput =
+    document.querySelector('input[name="nome"]');
+
+  if (nomeInput) {
+
+    nomeInput.addEventListener("input", function () {
+
+      if (this.value.trim() !== "") {
+
+        registrarResposta("nome");
+
+      }
+
+    });
+
+  }
+
+
+  /* =========================
      PORCENTAGEM ROBÔ
      ========================= */
 
-  const roboRange = document.getElementById("roboRange");
-  const roboValue = document.getElementById("roboValue");
+  const roboRange =
+    document.getElementById("roboRange");
 
-  roboRange.addEventListener("input", function () {
-    roboValue.textContent = this.value + "%";
-  });
+  const roboValue =
+    document.getElementById("roboValue");
+
+  if (roboRange) {
+
+    roboRange.addEventListener("input", function () {
+
+      roboValue.textContent =
+        this.value + "%";
+
+      registrarResposta("porcentagem_robo");
+
+    });
+
+  }
 
 
   /* =========================
@@ -1069,9 +1071,18 @@
   const distanciaValue =
     document.getElementById("distanciaValue");
 
-  distanciaRange.addEventListener("input", function () {
-    distanciaValue.textContent = this.value + "%";
-  });
+  if (distanciaRange) {
+
+    distanciaRange.addEventListener("input", function () {
+
+      distanciaValue.textContent =
+        this.value + "%";
+
+      registrarResposta("distancia");
+
+    });
+
+  }
 
 
   /* =========================
@@ -1080,16 +1091,25 @@
 
   function mostrarDrogas(mostrar) {
 
-    const campo = document.getElementById("tiposDrogas");
+    const campo =
+      document.getElementById("tiposDrogas");
+
+    if (!campo) return;
 
     if (mostrar) {
+
       campo.classList.remove("hidden");
+
     } else {
+
       campo.classList.add("hidden");
 
       campo
         .querySelectorAll("input")
-        .forEach(input => input.checked = false);
+        .forEach(input => {
+          input.checked = false;
+        });
+
     }
 
   }
@@ -1103,15 +1123,6 @@
 
     if (nunca) {
 
-      /*
-       * Aqui você pode conectar a lógica
-       * do seu sistema de compatibilidade.
-       *
-       * Exemplo:
-       *
-       * compatibilidade = 0;
-       */
-
       console.log(
         "Filtro zerado: esta espécie nunca foi utilizada como pet ou cobaia."
       );
@@ -1120,4 +1131,11 @@
 
   }
 
-</script>Z
+
+  /* =========================
+     VALOR INICIAL
+     ========================= */
+
+  atualizarContador();
+
+</script>
