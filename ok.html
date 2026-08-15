@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Perfil registrado</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f3f3f3;
+      color: #07074d;
+      padding: 40px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 850px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+    }
+
+    .header {
+      margin-bottom: 35px;
+    }
+
+    .header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: #536387;
+      font-size: 14px;
+    }
+
+    .section {
+      margin-top: 35px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .section-number {
+      width: 32px;
+      height: 32px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background: #6a64f1;
+      color: white;
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .section-title h2 {
+      font-size: 20px;
+    }
+
+    .answer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      padding: 14px 0;
+
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .question {
+      color: #536387;
+      font-size: 14px;
+      line-height: 22px;
+    }
+
+    .value {
+      color: #07074d;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: right;
+      line-height: 22px;
+    }
+
+    .empty {
+      color: #aaa;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .back-button {
+      display: block;
+
+      width: 100%;
+
+      margin-top: 40px;
+      padding: 15px 20px;
+
+      background: #6a64f1;
+      color: white;
+
+      text-decoration: none;
+      text-align: center;
+
+      border-radius: 7px;
+
+      font-size: 15px;
+      font-weight: 600;
+
+      transition: 0.2s;
+    }
+
+    .back-button:hover {
+      background: #5751d9;
+    }
+
+    @media (max-width: 600px) {
+
+      body {
+        padding: 15px;
+      }
+
+      .container {
+        padding: 25px 20px;
+      }
+
+      .header h1 {
+        font-size: 24px;
+      }
+
+      .answer {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .value {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <main class="container">
+
+    <header class="header">
+      <h1>Perfil registrado</h1>
+
+      <p>
+        As informações abaixo foram recebidas.
+      </p>
+    </header>
+
+
+    <!-- =================================
+         01 — CADASTRO
+         ================================= -->
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <div class="section-number">
+          01
+        </div>
+
+        <h2>Cadastro</h2>
+
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Nome</span>
+        <span class="value" id="nome"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Idade relativa</span>
+        <span class="value" id="idade_relativa"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Espécie</span>
+        <span class="value" id="especie"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Sexo / gênero</span>
+        <span class="value" id="genero"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Pronomes</span>
+        <span class="value" id="pronomes"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Planeta</span>
+        <span class="value" id="planeta"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Galáxia</span>
+        <span class="value" id="galaxia"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Porcentagem robótica</span>
+        <span class="value" id="porcentagem_robo"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Comunicação</span>
+        <span class="value" id="comunicacao"></span>
+      </div>
+
+    </section>
+
+
+    <!-- =================================
+         02 — OPINIÕES
+         ================================= -->
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <div class="section-number">
+          02
+        </div>
+
+        <h2>Opiniões</h2>
+
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Linguagem do amor</span>
+        <span class="value" id="linguagem_amor"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Hobby principal</span>
+        <span class="value" id="hobby"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Número de deuses</span>
+        <span class="value" id="deuses"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Número de filhos</span>
+        <span class="value" id="filhos"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Monogamia</span>
+        <span class="value" id="monogamia"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Uso de drogas</span>
+        <span class="value" id="drogas"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Tipos de drogas</span>
+        <span class="value" id="tipo_droga"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">
+          A tecnologia de teletransporte é ética?
+        </span>
+
+        <span class="value" id="teletransporte_etico"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">
+          O teletransporte deve substituir os buracos de minhoca?
+        </span>
+
+        <span class="value" id="substituir_buracos"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">
+          Principal consequência do teletransporte
+        </span>
+
+        <span class="value" id="consequencia_teletransporte"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">
+          Após o teletransporte, você ainda é você?
+        </span>
+
+        <span class="value" id="identidade"></span>
+      </div>
+
+    </section>
+
+
+    <!-- =================================
+         03 — STATUS
+         ================================= -->
+
+    <section class="section">
+
+      <div class="section-title">
+
+        <div class="section-number">
+          03
+        </div>
+
+        <h2>Status</h2>
+
+      </div>
+
+
+      <div class="answer">
+        <span class="question">Distância</span>
+        <span class="value" id="distancia"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">
+          Compatibilidade genética
+        </span>
+
+        <span class="value" id="compatibilidade"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">
+          Essa espécie já te utilizou como pet ou cobaia?
+        </span>
+
+        <span class="value" id="eles_usaram"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">
+          Você já utilizou essa espécie como pet ou cobaia?
+        </span>
+
+        <span class="value" id="eu_usei"></span>
+      </div>
+
+
+      <div class="answer">
+        <span class="question">
+          Responsabilidade histórica humana
+        </span>
+
+        <span class="value" id="responsabilidade_humana"></span>
+      </div>
+
+    </section>
+
+
+    <a href="index.html" class="back-button">
+      Voltar para o formulário
+    </a>
+
+  </main>
+
+
+  <script>
+
+    /*
+     * Lê as respostas enviadas pelo formulário.
+     */
+
+    const params = new URLSearchParams(
+      window.location.search
+    );
+
+
+    /*
+     * Preenche um campo.
+     */
+
+    function preencher(id) {
+
+      const elemento =
+        document.getElementById(id);
+
+      if (!elemento) return;
+
+
+      const valor =
+        params.get(id);
+
+
+      if (valor && valor.trim() !== "") {
+
+        elemento.textContent =
+          valor;
+
+      } else {
+
+        elemento.textContent =
+          "Não informado";
+
+        elemento.classList.add("empty");
+
+      }
+
+    }
+
+
+    /*
+     * Campos normais.
+     */
+
+    const campos = [
+
+      // Cadastro
+
+      "nome",
+      "idade_relativa",
+      "especie",
+      "genero",
+      "pronomes",
+      "planeta",
+      "galaxia",
+      "porcentagem_robo",
+      "comunicacao",
+
+      // Opiniões
+
+      "linguagem_amor",
+      "hobby",
+      "deuses",
+      "filhos",
+      "monogamia",
+      "drogas",
+      "teletransporte_etico",
+      "substituir_buracos",
+      "consequencia_teletransporte",
+      "identidade",
+
+      // Status
+
+      "distancia",
+      "compatibilidade",
+      "eles_usaram",
+      "eu_usei",
+      "responsabilidade_humana"
+
+    ];
+
+
+    campos.forEach(preencher);
+
+
+    /*
+     * Porcentagem robótica.
+     */
+
+    const robo =
+      document.getElementById(
+        "porcentagem_robo"
+      );
+
+    if (params.get("porcentagem_robo")) {
+
+      robo.textContent =
+        params.get("porcentagem_robo") + "%";
+
+    }
+
+
+    /*
+     * Distância.
+     */
+
+    const distancia =
+      document.getElementById(
+        "distancia"
+      );
+
+    if (params.get("distancia")) {
+
+      distancia.textContent =
+        params.get("distancia") + "%";
+
+    }
+
+
+    /*
+     * Tipos de drogas.
+     *
+     * Como são checkboxes, pode haver
+     * várias respostas.
+     */
+
+    const drogas =
+      params.getAll("tipo_droga[]");
+
+
+    const drogasElemento =
+      document.getElementById(
+        "tipo_droga"
+      );
+
+
+    if (drogas.length > 0) {
+
+      drogasElemento.textContent =
+        drogas.join(", ");
+
+    } else {
+
+      drogasElemento.textContent =
+        "Nenhuma";
+
+      drogasElemento.classList.add("empty");
+
+    }
+
+  </script>
+
+</body>
+</html>
