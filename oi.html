@@ -45,7 +45,7 @@
       <!-- Idade relativa -->
       <div class="formbold-mb-5">
         <label class="formbold-form-label">
-          Qual é a sua idade relativa?
+          Qual é a sua idade relativa à sua espécie?
         </label>
 
         <select name="idade_relativa" class="formbold-form-input">
@@ -434,10 +434,34 @@
 
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
 
-  @import url(
-    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
-  );
+  :root {
+    --pink-bg: #fff7fb;
+    --pink-light: #ffeaf4;
+    --pink-soft: #ffd6e7;
+    --pink: #ff8fbb;
+    --pink-strong: #e95d96;
+    --rose: #c83d73;
+
+    --purple-soft: #eee3ff;
+    --purple: #9670c9;
+
+    --text: #513141;
+    --muted: #9a7184;
+
+    --white: #ffffff;
+
+    --border: #f4d9e5;
+
+    --shadow:
+      0 25px 70px rgba(194, 73, 123, 0.13);
+  }
+
+
+  /* =========================================
+     BASE
+     ========================================= */
 
   * {
     margin: 0;
@@ -445,30 +469,84 @@
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    font-family: 'Inter', sans-serif;
-    background: #f3f3f3;
+    font-family: 'DM Sans', sans-serif;
+    background:
+      radial-gradient(
+        circle at 5% 5%,
+        rgba(255, 190, 216, .55),
+        transparent 27%
+      ),
+      radial-gradient(
+        circle at 95% 20%,
+        rgba(225, 207, 250, .45),
+        transparent 25%
+      ),
+      var(--pink-bg);
+
+    color: var(--text);
+    min-height: 100vh;
   }
 
 
-  /* =========================
+  /* =========================================
+     PEQUENOS "PLANETAS" DECORATIVOS
+     ========================================= */
+
+  body::before {
+    content: "✦";
+    position: fixed;
+    top: 90px;
+    left: 4%;
+    color: #ffafd0;
+    font-size: 28px;
+    opacity: .65;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: "♡";
+    position: fixed;
+    right: 4%;
+    bottom: 70px;
+    color: #d4b6ed;
+    font-size: 45px;
+    opacity: .5;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+
+  /* =========================================
      LAYOUT 2 : 3 : 2
-     ========================= */
+     ========================================= */
 
   .formbold-main-wrapper {
+    position: relative;
+    z-index: 1;
+
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
+
     gap: 30px;
+
     width: 100%;
     min-height: 100vh;
-    padding: 40px;
+
+    padding: 45px;
+
     align-items: start;
   }
 
 
-  /* =========================
-     IMAGENS
-     ========================= */
+  /* =========================================
+     IMAGENS LATERAIS
+     ========================================= */
 
   .side-image {
     width: 100%;
@@ -478,36 +556,100 @@
 
   .side-image img {
     display: block;
+
     width: 100%;
     aspect-ratio: 1 / 1;
+
     object-fit: cover;
-    border-radius: 12px;
+
+    border-radius: 30px;
+
+    border: 6px solid rgba(255, 255, 255, .85);
+
+    box-shadow:
+      0 25px 60px rgba(180, 72, 120, .15);
+
+    transition:
+      transform .35s ease,
+      box-shadow .35s ease;
+  }
+
+  .side-image img:hover {
+    transform: translateY(-6px) rotate(1deg);
+
+    box-shadow:
+      0 32px 75px rgba(180, 72, 120, .2);
   }
 
 
-  /* =========================
-     FORM
-     ========================= */
+  /* =========================================
+     FORMULÁRIO CENTRAL
+     ========================================= */
 
   .formbold-form-wrapper {
+    position: relative;
+
     width: 100%;
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.98),
+        rgba(255,250,253,.98)
+      );
+
+    padding: 42px;
+
+    border-radius: 34px;
+
+    border: 1px solid rgba(255, 211, 228, .9);
+
+    box-shadow: var(--shadow);
+  }
+
+  /*
+    Pequeno detalhe decorativo no topo
+  */
+
+  .formbold-form-wrapper::before {
+    content: "WORLDATING  ✦  CREATE YOUR PROFILE";
+
+    display: block;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+
+    color: var(--pink-strong);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
   }
 
 
-  /* =========================
-     TÍTULOS
-     ========================= */
+  /* =========================================
+     TÍTULOS DAS SEÇÕES
+     ========================================= */
 
   .section-title {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 13px;
+
+    margin-top: 40px;
     margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e5e7eb;
+
+    padding-bottom: 16px;
+
+    border-bottom:
+      1px solid var(--border);
+  }
+
+  .section-title:first-of-type {
+    margin-top: 0;
   }
 
   .section-title span {
@@ -515,30 +657,46 @@
     align-items: center;
     justify-content: center;
 
-    width: 32px;
-    height: 32px;
+    width: 38px;
+    height: 38px;
 
-    border-radius: 50%;
+    flex-shrink: 0;
 
-    background: #6a64f1;
+    border-radius: 14px;
+
+    background:
+      linear-gradient(
+        135deg,
+        #ff9fc5,
+        #ed6c9f
+      );
+
     color: white;
 
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 800;
+
+    box-shadow:
+      0 8px 20px rgba(233, 82, 145, .2);
   }
 
   .section-title h2 {
-    font-size: 22px;
-    color: #07074d;
+    font-family: 'Playfair Display', serif;
+
+    font-size: 27px;
+
+    letter-spacing: -.6px;
+
+    color: #513141;
   }
 
 
-  /* =========================
+  /* =========================================
      CAMPOS
-     ========================= */
+     ========================================= */
 
   .formbold-mb-5 {
-    margin-bottom: 24px;
+    margin-bottom: 25px;
   }
 
   .formbold-form-label {
@@ -546,47 +704,77 @@
 
     margin-bottom: 9px;
 
-    color: #536387;
+    color: #765568;
 
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 22px;
+    font-size: 13px;
+
+    font-weight: 700;
+
+    line-height: 1.65;
   }
 
   .formbold-form-input {
     width: 100%;
 
-    padding: 13px 16px;
+    padding: 14px 16px;
 
-    border: 1px solid #dde3ec;
-    border-radius: 6px;
+    border:
+      1px solid #f0d6e2;
 
-    background: white;
+    border-radius: 14px;
 
-    color: #536387;
+    background: #fffafd;
 
-    font-size: 15px;
+    color: #68485a;
+
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 14px;
 
     outline: none;
 
-    transition: 0.2s;
+    transition:
+      border-color .2s,
+      box-shadow .2s,
+      background .2s,
+      transform .2s;
+  }
+
+  .formbold-form-input:hover {
+    background: #ffffff;
+
+    border-color: #f4bfd5;
   }
 
   .formbold-form-input:focus {
-    border-color: #6a64f1;
+    background: white;
+
+    border-color: var(--pink);
 
     box-shadow:
-      0 0 0 3px rgba(106, 100, 241, 0.1);
+      0 0 0 4px rgba(255, 143, 187, .12);
+
+    transform: translateY(-1px);
+  }
+
+  .formbold-form-input::placeholder {
+    color: #c09bab;
+  }
+
+  select.formbold-form-input {
+    cursor: pointer;
   }
 
 
-  /* =========================
-     OPÇÕES
-     ========================= */
+  /* =========================================
+     OPÇÕES / RADIO
+     ========================================= */
 
   .options-grid {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 10px;
   }
 
@@ -604,30 +792,49 @@
     display: flex;
     align-items: center;
 
-    min-height: 48px;
+    min-height: 52px;
 
-    padding: 10px 14px;
+    padding: 11px 14px;
 
-    border: 1px solid #dde3ec;
-    border-radius: 7px;
+    border:
+      1px solid #f0d9e4;
+
+    border-radius: 15px;
 
     cursor: pointer;
 
-    color: #07074d;
+    background: #fffafd;
 
-    font-size: 13px;
+    color: #68485a;
 
-    transition: 0.2s;
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    transition:
+      transform .2s,
+      border-color .2s,
+      background .2s,
+      box-shadow .2s;
   }
 
   .option-card:hover {
-    border-color: #6a64f1;
-    background: #fafaff;
+    transform: translateY(-2px);
+
+    border-color: #f3a8c7;
+
+    background: #fff3f8;
+
+    box-shadow:
+      0 8px 20px rgba(190, 73, 121, .08);
   }
 
   .option-card input {
     position: absolute;
+
     opacity: 0;
+
+    pointer-events: none;
   }
 
   .option-card span {
@@ -635,170 +842,264 @@
   }
 
   .option-card input:checked + span {
-    color: #6a64f1;
-    font-weight: 600;
+    color: var(--rose);
+
+    font-weight: 800;
   }
 
   .option-card:has(input:checked) {
-    border-color: #6a64f1;
-    background: #f7f6ff;
+    border-color: #ff9fc4;
+
+    background:
+      linear-gradient(
+        135deg,
+        #fff0f6,
+        #ffe7f1
+      );
+
+    box-shadow:
+      0 8px 22px rgba(226, 76, 132, .1);
+
+    transform: translateY(-2px);
   }
 
+  .option-card:has(input:checked)::after {
+    content: "♥";
 
-  /* =========================
-     RANGE
-     ========================= */
+    position: absolute;
 
-  .range-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    top: 7px;
+    right: 9px;
 
-    color: #536387;
+    color: var(--pink);
+
     font-size: 11px;
   }
 
-  .range-wrapper input[type="range"] {
-    flex: 1;
 
-    accent-color: #6a64f1;
+  /* =========================================
+     CONTADOR
+     ========================================= */
 
-    cursor: pointer;
-  }
+  .profile-counter {
+    position: fixed;
 
-  .range-value {
-    margin-top: 8px;
+    top: 20px;
+    right: 20px;
+
+    z-index: 9999;
+
+    min-width: 165px;
+
+    padding: 14px 18px;
+
+    background:
+      rgba(255, 255, 255, .92);
+
+    border:
+      1px solid #f3d2e1;
+
+    border-radius: 20px;
+
+    box-shadow:
+      0 15px 40px rgba(179, 72, 117, .13);
 
     text-align: center;
 
-    color: #6a64f1;
+    backdrop-filter: blur(12px);
 
-    font-size: 13px;
-    font-weight: 600;
+    transition: .25s;
   }
 
-  /* =========================
-   CONTADOR — CANTO SUPERIOR DIREITO
-   ========================= */
+  .profile-counter::before {
+    content: "💗";
 
-.profile-counter {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+    display: block;
 
-  z-index: 9999;
+    margin-bottom: 3px;
 
-  min-width: 150px;
-  padding: 14px 18px;
+    font-size: 15px;
+  }
 
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid #dde3ec;
-  border-radius: 10px;
+  .counter-label {
+    display: block;
 
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    margin-bottom: 3px;
 
-  text-align: center;
+    color: #a47b8d;
 
-  transition: 0.25s;
-}
+    font-size: 10px;
 
-.counter-label {
-  display: block;
+    font-weight: 700;
 
-  margin-bottom: 4px;
-
-  color: #536387;
-
-  font-size: 11px;
-  font-weight: 500;
-}
-
-.profile-counter strong {
-  display: block;
-
-  color: #6a64f1;
-
-  font-size: 24px;
-  font-weight: 700;
-
-  transition: 0.2s;
-}
-
-/* efeito quando o número muda */
-.profile-counter.changed {
-  transform: scale(1.05);
-}
-
-@media (max-width: 750px) {
-  .profile-counter {
-    top: 10px;
-    right: 10px;
-
-    min-width: 120px;
-    padding: 10px 12px;
+    letter-spacing: .3px;
   }
 
   .profile-counter strong {
-    font-size: 19px;
-  }
-}
+    display: block;
 
-  /* =========================
+    color: var(--rose);
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    transition: .2s;
+  }
+
+  .profile-counter.changed {
+    transform: scale(1.05);
+  }
+
+
+  /* =========================================
      BOTÃO
-     ========================= */
+     ========================================= */
 
   .formbold-btn {
     width: 100%;
 
-    margin-top: 15px;
+    margin-top: 18px;
 
-    padding: 15px 25px;
+    padding: 17px 25px;
 
     border: none;
-    border-radius: 7px;
 
-    background: #6a64f1;
+    border-radius: 50px;
+
+    background:
+      linear-gradient(
+        135deg,
+        #ff96bd,
+        #e95d96
+      );
+
     color: white;
 
-    font-size: 15px;
-    font-weight: 600;
+    font-family: 'DM Sans', sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    letter-spacing: .2px;
 
     cursor: pointer;
 
-    transition: 0.2s;
+    box-shadow:
+      0 14px 30px rgba(224, 76, 132, .22);
+
+    transition:
+      transform .2s,
+      box-shadow .2s,
+      filter .2s;
+  }
+
+  .formbold-btn::before {
+    content: "♥  ";
   }
 
   .formbold-btn:hover {
-    background: #5751d9;
+    transform: translateY(-3px);
+
+    filter: brightness(1.03);
+
+    box-shadow:
+      0 19px 38px rgba(224, 76, 132, .3);
+  }
+
+  .formbold-btn:active {
     transform: translateY(-1px);
   }
 
 
-  /* =========================
-     CAMPO CONDICIONAL
-     ========================= */
+  /* =========================================
+     CAMPOS OCULTOS
+     ========================================= */
 
   .hidden {
     display: none;
   }
 
 
-  /* =========================
-     RESPONSIVO
-     ========================= */
+  /* =========================================
+     SCROLLBAR
+     ========================================= */
 
-  @media (max-width: 1000px) {
+  ::-webkit-scrollbar {
+    width: 9px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #fff1f7;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background:
+      linear-gradient(
+        #ffb2cf,
+        #e978a6
+      );
+
+    border-radius: 20px;
+  }
+
+
+  /* =========================================
+     SELEÇÃO DE TEXTO
+     ========================================= */
+
+  ::selection {
+    background: #ffc5dc;
+    color: #613449;
+  }
+
+
+  /* =========================================
+     RESPONSIVO
+     ========================================= */
+
+  @media (max-width: 1100px) {
 
     .formbold-main-wrapper {
       grid-template-columns: 1fr 2fr 1fr;
-      gap: 15px;
-      padding: 20px;
-    }
 
-    .formbold-form-wrapper {
+      gap: 18px;
+
       padding: 25px;
     }
 
+    .formbold-form-wrapper {
+      padding: 30px;
+    }
+
+    .section-title h2 {
+      font-size: 24px;
+    }
+  }
+
+
+  @media (max-width: 850px) {
+
+    .formbold-main-wrapper {
+      grid-template-columns: 1fr 2fr;
+
+      padding: 20px;
+    }
+
+    .formbold-main-wrapper .side-image:last-child {
+      display: none;
+    }
+
+    .formbold-form-wrapper {
+      grid-column: 1 / -1;
+
+      max-width: 720px;
+
+      margin: auto;
+    }
   }
 
 
@@ -806,7 +1107,8 @@
 
     .formbold-main-wrapper {
       display: block;
-      padding: 15px;
+
+      padding: 12px;
     }
 
     .side-image {
@@ -815,7 +1117,18 @@
 
     .formbold-form-wrapper {
       max-width: 700px;
+
       margin: auto;
+
+      padding: 25px 20px;
+
+      border-radius: 25px;
+    }
+
+    .formbold-form-wrapper::before {
+      font-size: 8px;
+
+      letter-spacing: 1.5px;
     }
 
     .options-grid,
@@ -824,8 +1137,29 @@
       grid-template-columns: 1fr;
     }
 
-  }
+    .profile-counter {
+      top: 10px;
+      right: 10px;
 
+      min-width: 125px;
+
+      padding: 9px 12px;
+
+      border-radius: 16px;
+    }
+
+    .profile-counter strong {
+      font-size: 19px;
+    }
+
+    .counter-label {
+      font-size: 9px;
+    }
+
+    .section-title {
+      margin-top: 32px;
+    }
+  }
 </style>
 
 
