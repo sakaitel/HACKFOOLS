@@ -768,4 +768,43 @@ body {
     border-radius: 0;
     border: none;
   }
+  .premium-button {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 30px auto 22px;
+  padding: 18px 28px;
+
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  color: #fff;
+
+  background: linear-gradient(135deg, #ffd700, #ff8c00);
+  border: 2px solid #ffe98a;
+  border-radius: 12px;
+
+  box-shadow:
+    0 0 15px rgba(255, 193, 7, 0.5),
+    0 8px 25px rgba(0, 0, 0, 0.35);
+
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.premium-button:hover {
+  transform: scale(1.04);
+  background: linear-gradient(135deg, #ffe44d, #ff9800);
+  box-shadow:
+    0 0 30px rgba(255, 193, 7, 0.8),
+    0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.premium-button:active {
+  transform: scale(0.98);
+}
 }
