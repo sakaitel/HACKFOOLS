@@ -1,0 +1,1123 @@
+<div class="formbold-main-wrapper">
+
+  <!-- =========================
+       ESQUERDA — IMAGEM
+       ========================= -->
+  <div class="side-image">
+    <img src="imagem-esquerda.jpg" alt="Imagem esquerda">
+  </div>
+
+
+  <!-- =========================
+       CENTRO — FORMULÁRIO
+       ========================= -->
+  <div class="formbold-form-wrapper">
+
+    <form action="ok.html" method="GET">
+
+      <!-- =========================
+           CADASTRO
+           ========================= -->
+
+      <div class="section-title">
+        <span>01</span>
+        <h2>Cadastro</h2>
+      </div>
+
+      <!-- Nome -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">Nome</label>
+        <input
+          type="text"
+          name="nome"
+          placeholder="Digite seu nome"
+          class="formbold-form-input"
+          required
+        />
+      </div>
+
+
+      <!-- Idade relativa -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Qual é a sua idade relativa?
+        </label>
+
+        <select name="idade_relativa" class="formbold-form-input">
+          <option value="">Selecione</option>
+          <option>0–25%</option>
+          <option>26–50%</option>
+          <option>51–75%</option>
+          <option>76–100%</option>
+          <option>101–150%</option>
+          <option>151–250%</option>
+          <option>250%+</option>
+        </select>
+      </div>
+
+
+      <!-- Espécie -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">Qual é a sua espécie?</label>
+
+        <select name="especie" class="formbold-form-input">
+          <option value="">Selecione</option>
+          <option>Humana</option>
+          <option>Sintética</option>
+          <option>Alienígena</option>
+          <option>Híbrida</option>
+          <option>Pós-humana</option>
+          <option>Outra</option>
+        </select>
+      </div>
+
+
+      <!-- Sexo / gênero -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Qual é o seu sexo/gênero?
+        </label>
+
+        <select name="genero" class="formbold-form-input">
+          <option value="">Selecione</option>
+          <option>Feminino</option>
+          <option>Masculino</option>
+          <option>Não-binário</option>
+          <option>Fluido</option>
+          <option>Sem gênero</option>
+          <option>Outro</option>
+        </select>
+      </div>
+
+
+      <!-- Pronomes -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">Quais são seus pronomes?</label>
+
+        <select name="pronomes" class="formbold-form-input">
+          <option value="">Selecione</option>
+          <option>Ela / dela</option>
+          <option>Ele / dele</option>
+          <option>Elu / delu</option>
+          <option>Qualquer pronome</option>
+          <option>Nenhum</option>
+          <option>Outro</option>
+        </select>
+      </div>
+
+
+      <!-- Planeta -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Em qual planeta você nasceu?
+        </label>
+
+        <select name="planeta" class="formbold-form-input">
+          <option value="">Selecione</option>
+          <option>Terra</option>
+          <option>Marte</option>
+          <option>Vênus</option>
+          <option>Júpiter</option>
+          <option>Saturno</option>
+          <option>Outro</option>
+        </select>
+      </div>
+
+
+      <!-- Galáxia -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Em qual galáxia você nasceu?
+        </label>
+
+        <select name="galaxia" class="formbold-form-input">
+          <option>Via Láctea (VL)</option>
+          <option>Andrômeda</option>
+          <option>Galáxia do Triângulo</option>
+          <option>Outra</option>
+        </select>
+      </div>
+
+
+      <!-- Robô -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Qual porcentagem do seu corpo é robótica?
+        </label>
+
+        <div class="range-wrapper">
+          <input
+            type="range"
+            name="porcentagem_robo"
+            min="0"
+            max="100"
+            step="10"
+            value="0"
+            id="roboRange"
+          >
+
+          <span id="roboValue">0%</span>
+        </div>
+      </div>
+
+
+      <!-- Comunicação -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Como você se comunica?
+        </label>
+
+        <div class="options-grid">
+
+          <label class="option-card">
+            <input type="radio" name="comunicacao" value="telepatia">
+            <span>Telepatia</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="comunicacao" value="sonora">
+            <span>Sonora</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="comunicacao" value="vibracional">
+            <span>Vibracional</span>
+          </label>
+
+        </div>
+      </div>
+
+
+
+      <!-- =========================
+           OPINIÕES
+           ========================= -->
+
+      <div class="section-title">
+        <span>02</span>
+        <h2>Opiniões</h2>
+      </div>
+
+
+      <!-- Linguagem do amor -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Qual é a sua linguagem do amor?
+        </label>
+
+        <div class="options-grid">
+
+          <label class="option-card">
+            <input type="radio" name="linguagem_amor" value="palavras">
+            <span>Palavras de afirmação</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="linguagem_amor" value="tempo">
+            <span>Tempo de qualidade</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="linguagem_amor" value="presentes">
+            <span>Presentes</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="linguagem_amor" value="servico">
+            <span>Atos de serviço</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="linguagem_amor" value="fisico">
+            <span>Contato físico</span>
+          </label>
+
+        </div>
+      </div>
+
+
+      <!-- Hobby -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Qual é o seu hobby principal?
+        </label>
+
+        <select name="hobby" class="formbold-form-input">
+          <option value="">Selecione</option>
+          <option>Exploração espacial</option>
+          <option>Arte</option>
+          <option>Ciência</option>
+          <option>Jogos</option>
+          <option>Música</option>
+          <option>Socialização</option>
+          <option>Meditação</option>
+          <option>Construção</option>
+          <option>Pesquisa</option>
+          <option>Nenhum</option>
+        </select>
+      </div>
+
+
+      <!-- Deuses -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Quantos deuses você reconhece?
+        </label>
+
+        <select name="deuses" class="formbold-form-input">
+          <option value="">Selecione</option>
+          <option>0</option>
+          <option>1</option>
+          <option>2–5</option>
+          <option>6–10</option>
+          <option>11–100</option>
+          <option>100+</option>
+        </select>
+      </div>
+
+
+      <!-- Filhos -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Quantos filhos você tem?
+        </label>
+
+        <select name="filhos" class="formbold-form-input">
+          <option value="">Selecione</option>
+          <option>Nenhum</option>
+          <option>1</option>
+          <option>2–3</option>
+          <option>4–10</option>
+          <option>11+</option>
+        </select>
+      </div>
+
+
+      <!-- Monogamia -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Você pratica monogamia?
+        </label>
+
+        <div class="options-grid two">
+
+          <label class="option-card">
+            <input type="radio" name="monogamia" value="sim">
+            <span>Sim</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="monogamia" value="nao">
+            <span>Não</span>
+          </label>
+
+        </div>
+      </div>
+
+
+      <!-- Drogas -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Você utiliza drogas recreativas?
+        </label>
+
+        <div class="options-grid two">
+
+          <label class="option-card">
+            <input
+              type="radio"
+              name="drogas"
+              value="nao"
+              onclick="mostrarDrogas(false)"
+            >
+            <span>Não</span>
+          </label>
+
+          <label class="option-card">
+            <input
+              type="radio"
+              name="drogas"
+              value="sim"
+              onclick="mostrarDrogas(true)"
+            >
+            <span>Sim</span>
+          </label>
+
+        </div>
+      </div>
+
+
+      <!-- Tipos de drogas -->
+      <div
+        class="formbold-mb-5 hidden"
+        id="tiposDrogas"
+      >
+
+        <label class="formbold-form-label">
+          Qual categoria você utiliza?
+        </label>
+
+        <div class="options-grid">
+
+          <label class="option-card">
+            <input type="checkbox" name="tipo_droga[]" value="psicodelicas">
+            <span>Psicodélicas</span>
+          </label>
+
+          <label class="option-card">
+            <input type="checkbox" name="tipo_droga[]" value="estimulantes">
+            <span>Estimulantes</span>
+          </label>
+
+          <label class="option-card">
+            <input type="checkbox" name="tipo_droga[]" value="depressoras">
+            <span>Depressoras</span>
+          </label>
+
+          <label class="option-card">
+            <input type="checkbox" name="tipo_droga[]" value="sinteticas">
+            <span>Sintéticas</span>
+          </label>
+
+        </div>
+      </div>
+
+
+      <!-- Ética do teletransporte -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          A nova tecnologia de teletransporte é ética?
+        </label>
+
+        <div class="options-grid two">
+
+          <label class="option-card">
+            <input type="radio" name="teletransporte_etico" value="sim">
+            <span>Sim</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="teletransporte_etico" value="nao">
+            <span>Não</span>
+          </label>
+
+        </div>
+      </div>
+
+
+      <!-- Buracos de minhoca -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          O teletransporte deve substituir os buracos de minhoca?
+        </label>
+
+        <div class="options-grid two">
+
+          <label class="option-card">
+            <input type="radio" name="substituir_buracos" value="sim">
+            <span>Sim</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="substituir_buracos" value="nao">
+            <span>Não</span>
+          </label>
+
+        </div>
+      </div>
+
+
+      <!-- Consequência -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Qual será a principal consequência do teletransporte
+          na malha interestelar?
+        </label>
+
+        <select name="consequencia_teletransporte" class="formbold-form-input">
+
+          <option value="">Selecione</option>
+
+          <option>
+            Fim das viagens convencionais
+          </option>
+
+          <option>
+            Expansão acelerada das civilizações
+          </option>
+
+          <option>
+            Colapso das fronteiras planetárias
+          </option>
+
+          <option>
+            Aumento dos conflitos
+          </option>
+
+          <option>
+            Aumento da desigualdade entre espécies
+          </option>
+
+          <option>
+            Nenhuma consequência significativa
+          </option>
+
+        </select>
+      </div>
+
+
+      <!-- Identidade -->
+      <div class="formbold-mb-5">
+        <label class="formbold-form-label">
+          Após ser destruído e reconstruído,
+          você ainda é você?
+        </label>
+
+        <div class="options-grid">
+
+          <label class="option-card">
+            <input type="radio" name="identidade" value="sim">
+            <span>Sim</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="identidade" value="nao">
+            <span>Não</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="identidade" value="memoria">
+            <span>Se a memória for preservada</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="identidade" value="consciencia">
+            <span>Se a consciência for preservada</span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="identidade" value="impossivel">
+            <span>Não é possível saber</span>
+          </label>
+
+        </div>
+      </div>
+
+
+
+      <!-- =========================
+           STATUS
+           ========================= -->
+
+      <div class="section-title">
+        <span>03</span>
+        <h2>Status</h2>
+      </div>
+
+
+      <!-- Distância -->
+      <div class="formbold-mb-5">
+
+        <label class="formbold-form-label">
+          Qual é a distância até essa espécie?
+        </label>
+
+        <div class="range-wrapper">
+
+          <span>Contato</span>
+
+          <input
+            type="range"
+            name="distancia"
+            min="0"
+            max="100"
+            step="10"
+            value="50"
+            id="distanciaRange"
+          >
+
+          <span>Desconhecida</span>
+
+        </div>
+
+        <div class="range-value">
+          <span id="distanciaValue">50%</span>
+        </div>
+
+      </div>
+
+
+      <!-- Compatibilidade -->
+      <div class="formbold-mb-5">
+
+        <label class="formbold-form-label">
+          Qual é a compatibilidade genética?
+        </label>
+
+        <div class="options-grid three">
+
+          <label class="option-card">
+            <input
+              type="radio"
+              name="compatibilidade"
+              value="alta"
+            >
+            <span>Alta</span>
+          </label>
+
+          <label class="option-card">
+            <input
+              type="radio"
+              name="compatibilidade"
+              value="media"
+            >
+            <span>Média</span>
+          </label>
+
+          <label class="option-card">
+            <input
+              type="radio"
+              name="compatibilidade"
+              value="nenhuma"
+            >
+            <span>Nenhuma</span>
+          </label>
+
+        </div>
+      </div>
+
+
+      <!-- Eles usaram você -->
+      <div class="formbold-mb-5">
+
+        <label class="formbold-form-label">
+          Essa espécie já te utilizou como pet ou cobaia?
+        </label>
+
+        <div class="options-grid">
+
+          <label class="option-card">
+            <input
+              type="radio"
+              name="eles_usaram"
+              value="frequentemente"
+            >
+            <span>Frequentemente</span>
+          </label>
+
+          <label class="option-card">
+            <input
+              type="radio"
+              name="eles_usaram"
+              value="raramente"
+            >
+            <span>Raramente</span>
+          </label>
+
+          <label class="option-card">
+            <input
+              type="radio"
+              name="eles_usaram"
+              value="nunca"
+            >
+            <span>Nunca</span>
+          </label>
+
+        </div>
+      </div>
+
+
+      <!-- Você usou eles -->
+      <div class="formbold-mb-5">
+
+        <label class="formbold-form-label">
+          Você já utilizou essa espécie como pet ou cobaia?
+        </label>
+
+        <div class="options-grid">
+
+          <label class="option-card">
+            <input
+              type="radio"
+              name="eu_usei"
+              value="frequentemente"
+              onchange="zerarFiltro(false)"
+            >
+            <span>Frequentemente</span>
+          </label>
+
+          <label class="option-card">
+            <input
+              type="radio"
+              name="eu_usei"
+              value="raramente"
+              onchange="zerarFiltro(false)"
+            >
+            <span>Raramente</span>
+          </label>
+
+          <label class="option-card">
+            <input
+              type="radio"
+              name="eu_usei"
+              value="nunca"
+              onchange="zerarFiltro(true)"
+            >
+            <span>Nunca</span>
+          </label>
+
+        </div>
+      </div>
+
+
+      <!-- Responsabilidade humana -->
+      <div class="formbold-mb-5">
+
+        <label class="formbold-form-label">
+          Qual é o nível de responsabilidade histórica
+          da espécie humana sobre outras espécies?
+        </label>
+
+        <select
+          name="responsabilidade_humana"
+          class="formbold-form-input"
+        >
+
+          <option value="">Selecione</option>
+          <option>Nenhuma</option>
+          <option>Baixa</option>
+          <option>Moderada</option>
+          <option>Alta</option>
+          <option>Extrema</option>
+
+        </select>
+
+      </div>
+
+
+      <button type="submit" class="formbold-btn">
+        Registrar perfil
+      </button>
+
+    </form>
+
+  </div>
+
+
+  <!-- =========================
+       DIREITA — IMAGEM
+       ========================= -->
+  <div class="side-image">
+    <img src="imagem-direita.jpg" alt="Imagem direita">
+  </div>
+
+</div>
+
+
+<style>
+
+  @import url(
+    'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+  );
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f3f3f3;
+  }
+
+
+  /* =========================
+     LAYOUT 2 : 3 : 2
+     ========================= */
+
+  .formbold-main-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr;
+    gap: 30px;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+    align-items: start;
+  }
+
+
+  /* =========================
+     IMAGENS
+     ========================= */
+
+  .side-image {
+    width: 100%;
+    position: sticky;
+    top: 40px;
+  }
+
+  .side-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+
+  /* =========================
+     FORM
+     ========================= */
+
+  .formbold-form-wrapper {
+    width: 100%;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+  }
+
+
+  /* =========================
+     TÍTULOS
+     ========================= */
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .section-title span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+
+    background: #6a64f1;
+    color: white;
+
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .section-title h2 {
+    font-size: 22px;
+    color: #07074d;
+  }
+
+
+  /* =========================
+     CAMPOS
+     ========================= */
+
+  .formbold-mb-5 {
+    margin-bottom: 24px;
+  }
+
+  .formbold-form-label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #536387;
+
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+
+  .formbold-form-input {
+    width: 100%;
+
+    padding: 13px 16px;
+
+    border: 1px solid #dde3ec;
+    border-radius: 6px;
+
+    background: white;
+
+    color: #536387;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+  }
+
+  .formbold-form-input:focus {
+    border-color: #6a64f1;
+
+    box-shadow:
+      0 0 0 3px rgba(106, 100, 241, 0.1);
+  }
+
+
+  /* =========================
+     OPÇÕES
+     ========================= */
+
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .options-grid.two {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .options-grid.three {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .option-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 48px;
+
+    padding: 10px 14px;
+
+    border: 1px solid #dde3ec;
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    color: #07074d;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+  }
+
+  .option-card:hover {
+    border-color: #6a64f1;
+    background: #fafaff;
+  }
+
+  .option-card input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .option-card span {
+    width: 100%;
+  }
+
+  .option-card input:checked + span {
+    color: #6a64f1;
+    font-weight: 600;
+  }
+
+  .option-card:has(input:checked) {
+    border-color: #6a64f1;
+    background: #f7f6ff;
+  }
+
+
+  /* =========================
+     RANGE
+     ========================= */
+
+  .range-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #536387;
+    font-size: 11px;
+  }
+
+  .range-wrapper input[type="range"] {
+    flex: 1;
+
+    accent-color: #6a64f1;
+
+    cursor: pointer;
+  }
+
+  .range-value {
+    margin-top: 8px;
+
+    text-align: center;
+
+    color: #6a64f1;
+
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+
+  /* =========================
+     BOTÃO
+     ========================= */
+
+  .formbold-btn {
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 15px 25px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #6a64f1;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+  }
+
+  .formbold-btn:hover {
+    background: #5751d9;
+    transform: translateY(-1px);
+  }
+
+
+  /* =========================
+     CAMPO CONDICIONAL
+     ========================= */
+
+  .hidden {
+    display: none;
+  }
+
+
+  /* =========================
+     RESPONSIVO
+     ========================= */
+
+  @media (max-width: 1000px) {
+
+    .formbold-main-wrapper {
+      grid-template-columns: 1fr 2fr 1fr;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .formbold-form-wrapper {
+      padding: 25px;
+    }
+
+  }
+
+
+  @media (max-width: 750px) {
+
+    .formbold-main-wrapper {
+      display: block;
+      padding: 15px;
+    }
+
+    .side-image {
+      display: none;
+    }
+
+    .formbold-form-wrapper {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .options-grid,
+    .options-grid.two,
+    .options-grid.three {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+</style>
+
+
+<script>
+
+  /* =========================
+     PORCENTAGEM ROBÔ
+     ========================= */
+
+  const roboRange = document.getElementById("roboRange");
+  const roboValue = document.getElementById("roboValue");
+
+  roboRange.addEventListener("input", function () {
+    roboValue.textContent = this.value + "%";
+  });
+
+
+  /* =========================
+     DISTÂNCIA
+     ========================= */
+
+  const distanciaRange =
+    document.getElementById("distanciaRange");
+
+  const distanciaValue =
+    document.getElementById("distanciaValue");
+
+  distanciaRange.addEventListener("input", function () {
+    distanciaValue.textContent = this.value + "%";
+  });
+
+
+  /* =========================
+     DROGAS
+     ========================= */
+
+  function mostrarDrogas(mostrar) {
+
+    const campo = document.getElementById("tiposDrogas");
+
+    if (mostrar) {
+      campo.classList.remove("hidden");
+    } else {
+      campo.classList.add("hidden");
+
+      campo
+        .querySelectorAll("input")
+        .forEach(input => input.checked = false);
+    }
+
+  }
+
+
+  /* =========================
+     ZERAR FILTRO
+     ========================= */
+
+  function zerarFiltro(nunca) {
+
+    if (nunca) {
+
+      /*
+       * Aqui você pode conectar a lógica
+       * do seu sistema de compatibilidade.
+       *
+       * Exemplo:
+       *
+       * compatibilidade = 0;
+       */
+
+      console.log(
+        "Filtro zerado: esta espécie nunca foi utilizada como pet ou cobaia."
+      );
+
+    }
+
+  }
+
+</script>Z
