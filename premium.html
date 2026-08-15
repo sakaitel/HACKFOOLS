@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium — Sinais</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(circle at top, #30205c 0%, #130d25 45%, #08050f 100%);
+      padding: 40px 20px;
+    }
+
+    .premium-page {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .back {
+      display: inline-block;
+      color: #aaa;
+      text-decoration: none;
+      margin-bottom: 35px;
+      transition: color .2s;
+    }
+
+    .back:hover {
+      color: #fff;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .premium-icon {
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      margin-bottom: 12px;
+      background: linear-gradient(90deg, #ffd700, #ff9d00, #fff1a3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      color: #bbb;
+      font-size: 1.1rem;
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .plan {
+      position: relative;
+      padding: 32px 25px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: transform .2s, border-color .2s;
+    }
+
+    .plan:hover {
+      transform: translateY(-7px);
+      border-color: rgba(255,215,0,.55);
+    }
+
+    .plan.featured {
+      border: 2px solid #ffd700;
+      box-shadow: 0 0 35px rgba(255,215,0,.18);
+      transform: scale(1.03);
+    }
+
+    .plan.featured:hover {
+      transform: scale(1.05) translateY(-5px);
+    }
+
+    .badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 7px 18px;
+      border-radius: 30px;
+      background: #ffd700;
+      color: #1a1200;
+      font-size: .8rem;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .plan h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      margin-bottom: 25px;
+    }
+
+    .price strong {
+      display: block;
+      font-size: 2.4rem;
+      color: #ffd700;
+    }
+
+    .price span {
+      color: #888;
+      font-size: .9rem;
+    }
+
+    .features {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+
+    .features li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      color: #ddd;
+    }
+
+    .features li::before {
+      content: "✓";
+      color: #ffd700;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .buy-button {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      border: 0;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #ffd700, #ff9200);
+      color: #181000;
+      font-size: 1rem;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .buy-button:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 25px rgba(255,193,7,.45);
+    }
+
+    .fine-print {
+      text-align: center;
+      margin-top: 35px;
+      color: #666;
+      font-size: .8rem;
+    }
+
+    @media (max-width: 800px) {
+      .plans {
+        grid-template-columns: 1fr;
+      }
+
+      .plan.featured,
+      .plan.featured:hover {
+        transform: none;
+      }
+
+      .plan {
+        max-width: 500px;
+        width: 100%;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="premium-page">
+
+    <a href="index.html" class="back">← Voltar</a>
+
+    <section class="hero">
+      <div class="premium-icon">👑</div>
+
+      <h1>PREMIUM</h1>
+
+      <p>
+        Desbloqueie todo o potencial dos seus sinais.
+        Veja mais perfis, use Superlikes e navegue sem anúncios.
+      </p>
+    </section>
+
+    <section class="plans">
+
+      <!-- PLANO 1 -->
+      <article class="plan">
+        <h2>Explorador</h2>
+
+        <div class="price">
+          <strong>R$ 199,90</strong>
+          <span>por mês</span>
+        </div>
+
+        <ul class="features">
+          <li>Até 25 perfis por dia</li>
+          <li>5 Superlikes por dia</li>
+          <li>Sem anúncios</li>
+          <li>Acesso aos perfis premium</li>
+        </ul>
+
+        <button class="buy-button" onclick="comprar('Explorador')">
+          COMPRAR AGORA
+        </button>
+      </article>
+
+
+      <!-- PLANO 2 -->
+      <article class="plan featured">
+        <div class="badge">MAIS POPULAR</div>
+
+        <h2>Predador</h2>
+
+        <div class="price">
+          <strong>R$ 499,90</strong>
+          <span>por mês</span>
+        </div>
+
+        <ul class="features">
+          <li>Até 100 perfis por dia</li>
+          <li>20 Superlikes por dia</li>
+          <li>Sem anúncios</li>
+          <li>Acesso aos perfis premium</li>
+          <li>Prioridade na descriptografia</li>
+        </ul>
+
+        <button class="buy-button" onclick="comprar('Predador')">
+          QUERO SER PREMIUM
+        </button>
+      </article>
+
+
+      <!-- PLANO 3 -->
+      <article class="plan">
+        <h2>Entidade</h2>
+
+        <div class="price">
+          <strong>R$ 1.999,90</strong>
+          <span>por mês</span>
+        </div>
+
+        <ul class="features">
+          <li>Perfis ilimitados</li>
+          <li>Superlikes ilimitados</li>
+          <li>Zero anúncios</li>
+          <li>Todos os perfis premium</li>
+          <li>Descriptografia prioritária</li>
+          <li>Acesso antecipado a novos sinais</li>
+        </ul>
+
+        <button class="buy-button" onclick="comprar('Entidade')">
+          DESBLOQUEAR TUDO
+        </button>
+      </article>
+
+    </section>
+
+    <p class="fine-print">
+      Os benefícios são ativados após a confirmação do pagamento.
+    </p>
+
+  </main>
+
+  <script>
+    function comprar(plano) {
+      alert(
+        "Plano selecionado: " + plano +
+        "\\n\\nIntegração de pagamento ainda não configurada."
+      );
+    }
+  </script>
+
+</body>
+</html>
