@@ -1,7 +1,7 @@
 const perfis = [
   {
     id: 1,
-    imagem: "assets/images/alien-01.jpg",
+    imagem: "alien-01.jpg",
     nome: "K'rrak Chitin",
     idade_relativa: "60–79%",
     especie: "Ecteídios",
@@ -20,7 +20,7 @@ const perfis = [
   },
   {
     id: 2,
-    imagem: "assets/images/alien-02.jpg",
+    imagem: "alien-02.jpg",
     nome: "Nymphaea Vael",
     idade_relativa: "20–29%",
     especie: "Glorbs",
@@ -39,7 +39,7 @@ const perfis = [
   },
   {
     id: 3,
-    imagem: "assets/images/alien-03.jpg",
+    imagem: "alien-03.jpg",
     nome: "Unit-7X",
     idade_relativa: "30–44%",
     especie: "Sintéticos",
@@ -58,7 +58,7 @@ const perfis = [
   },
   {
     id: 4,
-    imagem: "assets/images/alien-04.jpg",
+    imagem: "alien-04.jpg",
     nome: "Szzorath",
     idade_relativa: "45–59%",
     especie: "Reptilianos",
@@ -77,7 +77,7 @@ const perfis = [
   },
   {
     id: 5,
-    imagem: "assets/images/alien-05.jpg",
+    imagem: "alien-05.jpg",
     nome: "Aethelgard 9",
     idade_relativa: "30–44%",
     especie: "Híbridos",
@@ -98,7 +98,7 @@ const perfis = [
 
 // Imagem usada de fundo borrado para o card que está "bloqueado" aguardando o timer
 const perfilBloqueadoDeFundo = {
-  imagem: "assets/images/alien-02.jpg",
+  imagem: "alien-02.jpg",
   nome: "Próximo ser misterioso...",
   especie: "Sinal criptografado"
 };
