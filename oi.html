@@ -1,17 +1,25 @@
+
 <div class="formbold-main-wrapper">
 
   <!-- =========================
        ESQUERDA — IMAGEM
        ========================= -->
-  <div class="side-image">
-    <img src="imagem-esquerda.jpg" alt="Imagem esquerda">
+  <div class="side-image side-left">
+    <div class="infinite-images">
+      <img src="img_esquerda.jpg" alt="">
+      <img src="img_esquerda.jpg" alt="">
+      <img src="img_esquerda.jpg" alt="">
+      <img src="img_esquerda.jpg" alt="">
+      <img src="img_esquerda.jpg" alt="">
+      <img src="img_esquerda.jpg" alt="">
+    </div>
   </div>
 
   <!-- CONTADOR DE CAPACIDADE DO PERFIL -->
-<div id="profileCounter" class="profile-counter">
-  <span class="counter-label">Pessoas compatíveis</span>
-  <strong id="counterValue">100 mil</strong>
-</div>
+  <div id="profileCounter" class="profile-counter">
+    <span class="counter-label">Seres compatíveis</span>
+    <strong id="counterValue">100 mil</strong>
+  </div>
 
   <!-- =========================
        CENTRO — FORMULÁRIO
@@ -32,13 +40,7 @@
       <!-- Nome -->
       <div class="formbold-mb-5">
         <label class="formbold-form-label">Nome</label>
-        <input
-          type="text"
-          name="nome"
-          placeholder="Digite seu nome"
-          class="formbold-form-input"
-          required
-        />
+        <input type="text" name="nome" placeholder="Digite seu nome" class="formbold-form-input" required />
       </div>
 
 
@@ -126,7 +128,7 @@
       </div>
 
 
-     
+
 
 
 
@@ -263,7 +265,9 @@
       <!-- Ética do teletransporte -->
       <div class="formbold-mb-5">
         <label class="formbold-form-label">
-          Considerando se a nova tecnologia de teletransporte é ética, se podemos substituir os buracos de minhoca, quais as ramificações do teletransporte na malha interestelar, e a destruição da matéria e reconstrução em outro lugar nos leva a questionar: você ainda é você?
+          Considerando se a nova tecnologia de teletransporte é ética, se podemos substituir os buracos de minhoca,
+          quais as ramificações do teletransporte na malha interestelar, e a destruição da matéria e reconstrução em
+          outro lugar nos leva a questionar: você ainda é você?
         </label>
 
         <div class="options-grid two">
@@ -288,7 +292,7 @@
 
       <div class="section-title">
         <span>03</span>
-        <h2>Incompatibilidades</h2>
+        <h2>O que você procura</h2>
       </div>
 
       <!-- Compatibilidade -->
@@ -301,29 +305,17 @@
         <div class="options-grid three">
 
           <label class="option-card">
-            <input
-              type="radio"
-              name="compatibilidade"
-              value="alta"
-            >
+            <input type="radio" name="compatibilidade" value="alta">
             <span>Alta</span>
           </label>
 
           <label class="option-card">
-            <input
-              type="radio"
-              name="compatibilidade"
-              value="media"
-            >
+            <input type="radio" name="compatibilidade" value="media">
             <span>Média</span>
           </label>
 
           <label class="option-card">
-            <input
-              type="radio"
-              name="compatibilidade"
-              value="nenhuma"
-            >
+            <input type="radio" name="compatibilidade" value="nenhuma">
             <span>Nenhuma</span>
           </label>
 
@@ -341,29 +333,17 @@
         <div class="options-grid">
 
           <label class="option-card">
-            <input
-              type="radio"
-              name="eles_usaram"
-              value="frequentemente"
-            >
+            <input type="radio" name="eles_usaram" value="frequentemente">
             <span>Frequentemente</span>
           </label>
 
           <label class="option-card">
-            <input
-              type="radio"
-              name="eles_usaram"
-              value="raramente"
-            >
+            <input type="radio" name="eles_usaram" value="raramente">
             <span>Raramente</span>
           </label>
 
           <label class="option-card">
-            <input
-              type="radio"
-              name="eles_usaram"
-              value="nunca"
-            >
+            <input type="radio" name="eles_usaram" value="nunca">
             <span>Nunca</span>
           </label>
 
@@ -381,32 +361,17 @@
         <div class="options-grid">
 
           <label class="option-card">
-            <input
-              type="radio"
-              name="eu_usei"
-              value="frequentemente"
-              onchange="zerarFiltro(false)"
-            >
+            <input type="radio" name="eu_usei" value="frequentemente" onchange="zerarFiltro(false)">
             <span>Frequentemente</span>
           </label>
 
           <label class="option-card">
-            <input
-              type="radio"
-              name="eu_usei"
-              value="raramente"
-              onchange="zerarFiltro(false)"
-            >
+            <input type="radio" name="eu_usei" value="raramente" onchange="zerarFiltro(false)">
             <span>Raramente</span>
           </label>
 
           <label class="option-card">
-            <input
-              type="radio"
-              name="eu_usei"
-              value="nunca"
-              onchange="zerarFiltro(true)"
-            >
+            <input type="radio" name="eu_usei" value="nunca" onchange="zerarFiltro(true)">
             <span>Nunca</span>
           </label>
 
@@ -426,8 +391,15 @@
   <!-- =========================
        DIREITA — IMAGEM
        ========================= -->
-  <div class="side-image">
-    <img src="imagem-direita.jpg" alt="Imagem direita">
+  <div class="side-image side-right">
+    <div class="infinite-images">
+      <img src="img_direita.jpg" alt="">
+      <img src="img_direita.jpg" alt="">
+      <img src="img_direita.jpg" alt="">
+      <img src="img_direita.jpg" alt="">
+      <img src="img_direita.jpg" alt="">
+      <img src="img_direita.jpg" alt="">
+    </div>
   </div>
 
 </div>
@@ -476,16 +448,12 @@
   body {
     font-family: 'DM Sans', sans-serif;
     background:
-      radial-gradient(
-        circle at 5% 5%,
+      radial-gradient(circle at 5% 5%,
         rgba(255, 190, 216, .55),
-        transparent 27%
-      ),
-      radial-gradient(
-        circle at 95% 20%,
+        transparent 27%),
+      radial-gradient(circle at 95% 20%,
         rgba(225, 207, 250, .45),
-        transparent 25%
-      ),
+        transparent 25%),
       var(--pink-bg);
 
     color: var(--text);
@@ -543,24 +511,18 @@
     align-items: start;
   }
 
-
   /* =========================================
-     IMAGENS LATERAIS
+     LATERAIS — IMAGENS INFINITAS
      ========================================= */
 
   .side-image {
     width: 100%;
+    height: calc(100vh - 80px);
+
     position: sticky;
     top: 40px;
-  }
 
-  .side-image img {
-    display: block;
-
-    width: 100%;
-    aspect-ratio: 1 / 1;
-
-    object-fit: cover;
+    overflow: hidden;
 
     border-radius: 30px;
 
@@ -569,16 +531,155 @@
     box-shadow:
       0 25px 60px rgba(180, 72, 120, .15);
 
-    transition:
-      transform .35s ease,
-      box-shadow .35s ease;
+    background: #ffeaf4;
   }
 
-  .side-image img:hover {
-    transform: translateY(-6px) rotate(1deg);
 
-    box-shadow:
-      0 32px 75px rgba(180, 72, 120, .2);
+  .infinite-images {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    /*
+      O conteúdo tem várias cópias da mesma imagem.
+      A animação desloca uma sequência inteira
+      e reinicia de forma contínua.
+    */
+
+    animation:
+      infiniteScroll 24s linear infinite;
+  }
+
+
+  .infinite-images img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border: 0;
+
+    border-radius: 0;
+
+    box-shadow: none;
+  }
+
+
+  /*
+   * Esquerda e direita podem ter velocidades
+   * diferentes para ficar mais interessante.
+   */
+
+  .side-left .infinite-images {
+    animation-duration: 27s;
+  }
+
+  .side-right .infinite-images {
+    animation-duration: 21s;
+
+    /*
+     * Começa ligeiramente diferente da esquerda.
+     */
+    transform: translateY(-280px);
+  }
+
+
+  /*
+   * Animação vertical contínua
+   */
+
+  @keyframes infiniteScroll {
+
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-1680px);
+    }
+
+  }
+
+
+  /*
+   * Pequeno degradê nas bordas para deixar
+   * o movimento mais suave.
+   */
+
+  .side-image::before {
+    content: "";
+
+    position: absolute;
+
+    z-index: 2;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 90px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(255,247,251,.9),
+        transparent
+      );
+
+    pointer-events: none;
+  }
+
+
+  .side-image::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 90px;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(255,247,251,.9),
+        transparent
+      );
+
+    pointer-events: none;
+  }
+
+
+  /*
+   * Pausa ao passar o mouse.
+   * Pode remover se quiser movimento constante.
+   */
+
+  .side-image:hover .infinite-images {
+    animation-play-state: paused;
+  }
+
+
+  /* =========================================
+     MOBILE
+     ========================================= */
+
+  @media (max-width: 750px) {
+
+    .side-image {
+      display: none;
+    }
+
   }
 
 
@@ -592,11 +693,9 @@
     width: 100%;
 
     background:
-      linear-gradient(
-        180deg,
-        rgba(255,255,255,.98),
-        rgba(255,250,253,.98)
-      );
+      linear-gradient(180deg,
+        rgba(255, 255, 255, .98),
+        rgba(255, 250, 253, .98));
 
     padding: 42px;
 
@@ -665,11 +764,9 @@
     border-radius: 14px;
 
     background:
-      linear-gradient(
-        135deg,
+      linear-gradient(135deg,
         #ff9fc5,
-        #ed6c9f
-      );
+        #ed6c9f);
 
     color: white;
 
@@ -841,7 +938,7 @@
     width: 100%;
   }
 
-  .option-card input:checked + span {
+  .option-card input:checked+span {
     color: var(--rose);
 
     font-weight: 800;
@@ -851,11 +948,9 @@
     border-color: #ff9fc4;
 
     background:
-      linear-gradient(
-        135deg,
+      linear-gradient(135deg,
         #fff0f6,
-        #ffe7f1
-      );
+        #ffe7f1);
 
     box-shadow:
       0 8px 22px rgba(226, 76, 132, .1);
@@ -970,11 +1065,9 @@
     border-radius: 50px;
 
     background:
-      linear-gradient(
-        135deg,
+      linear-gradient(135deg,
         #ff96bd,
-        #e95d96
-      );
+        #e95d96);
 
     color: white;
 
@@ -1038,10 +1131,8 @@
 
   ::-webkit-scrollbar-thumb {
     background:
-      linear-gradient(
-        #ffb2cf,
-        #e978a6
-      );
+      linear-gradient(#ffb2cf,
+        #e978a6);
 
     border-radius: 20px;
   }
