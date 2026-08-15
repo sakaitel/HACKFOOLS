@@ -336,7 +336,9 @@ function showLockoutScreen() {
           <span>Seg</span>
         </div>
       </div>
-
+      <a href="premium.html" class="premium-button">
+          ✦ COMPRAR PREMIUM ✦
+        </a>
       <div class="lockout-tag">✦ 1 perfil aguardando descriptografia</div>
     </div>
   `;
